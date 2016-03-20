@@ -12,6 +12,7 @@ public class HelloWorld extends HttpServlet {
 					throws ServletException, IOException
 	{
 		league = request.getParameter("first_name");
+		League newLeague = new League(league, null, 0);
 		response.sendRedirect("http://localhost:8080/Hello.htm");
 		//response.setContentType("text/html");
 		
