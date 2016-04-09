@@ -1,0 +1,126 @@
+<!-- <html> -->
+<!-- <body> -->
+<!-- <form action="HelloWorld" method="GET"> -->
+<!-- League Name: <input type="text" name="first_name"> -->
+<!-- </form> -->
+<!-- </body> -->
+<!-- </html> -->
+
+
+
+<!DOCTYPE HTML>
+<html lang="en" ng-app>
+<head>
+<title>Fantasy Draft Lottery</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<script src="index.js"></script>
+	<!-- Static navbar -->
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Project name</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="/DraftHub/WebContent/commissioner.html">Commissioner</a></li>
+					<li><a href="/DraftHub/WebContent/lottery.html">Lottery</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="../navbar/">Default</a></li>
+					<li class="active"><a href="./">Static top <span
+							class="sr-only">(current)</span></a></li>
+					<li><a href="../navbar-fixed-top/">Fixed top</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+	<div class="container">
+
+		<!-- Main component for a primary marketing message or call to action -->
+		<div class="jumbotron">
+			<h1>Set up league</h1>
+			<div class="LeagueName">
+				<form action="League" method="GET">
+					League Name: <input type="text" name="league_name">
+				</form>
+			</div>
+			<div>
+				<h3>Select number of teams</h3>
+				<select id="teamSelect" onchange="getNumTeams()">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option selected="selected">10</option>
+					<option>11</option>
+					<option>12</option>
+				</select>
+			</div>
+			<div class="teamNames">
+				<table class="owners">
+					<tr>
+						<td><form>
+								Owner<br> <input id="Owner1" type="text" name="Owner"><br>
+								Team Name<br> <input id="teamname1" type="text"
+									name="teamname">
+							</form></td>
+					</tr>
+				</table>
+			</div>
+			<div>
+				<button type="button" class="btn btn-primary"
+					onClick="createLeague()">Create League</button>
+			</div>
+			</form>
+		</div>
+
+	</div>
+	<!-- /container -->
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		window.jQuery
+				|| document
+						.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+	</script>
+	<script src="../../dist/js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
