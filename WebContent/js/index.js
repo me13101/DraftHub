@@ -9,16 +9,14 @@ function getNumTeams() {
 	console.log(numTeams)
 }
 function leagueScreen(){
-	alert("got here");
+	window.location = "http://localhost:8080/Dashboard.html";
 }
 function createLeague(){
-	console.log("got here");
+	
 	numTeams = $( "#teamSelect" ).val();
 	leagueName = $("#leagueName").val();
 	var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
-    	alert("status: "+xhr.status);
-    	alert("readyState: "+xhr.readyState);
         if (xhr.readyState == 4 && xhr.status == 200) {
         	leagueScreen();
         }
