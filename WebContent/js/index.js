@@ -8,26 +8,19 @@ function getNumTeams() {
 	var numTeams = $( "#teamSelect" ).val();
 	console.log(numTeams)
 }
-
+function leagueScreen(){
+	window.location = "http://localhost:8080/Dashboard.html";
+}
 function createLeague(){
+	
 	numTeams = $( "#teamSelect" ).val();
-	leagueName = $("leagueName").val();
-	//league name not working
-	leagueID = 1;
-	var league = [{"num": numTeams, "name": leagueName, "id": leagueID}];
-	console.log(league);
-	$.ajax({
-	    type: 'get', // it's easier to read GET request parameters
-	    url: 'index.js',
-	    dataType: 'JSON',
-	    data: { 
-	      league: JSON.stringify(league) // look here!
-	    },
-	    success: function(data) {
-	    	console.log("got here");
-	    },
-	    error: function(data) {
-	        console.log(data.num);
-	    }
-	});
+	leagueName = $("#leagueName").val();
+	var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+        	leagueScreen();
+        }
+    }
+    xhr.open('GET', '/App?league_name='+leagueName+'&num_teams='+numTeams, true);
+    xhr.send(null);
 }
