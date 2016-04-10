@@ -9,9 +9,9 @@ public class App extends HttpServlet {
 	static final long serialVersionUID = 42L;
 	public String Name;
 	public String Commissioner;
+	public String commEmail;
 	public int num_Teams;
 	public int ID;
-
 
 	public void doGet(HttpServletRequest request,
 			HttpServletResponse response)
@@ -20,6 +20,8 @@ public class App extends HttpServlet {
 		File file = new File("C:/xampp/tomcat/webapps/ROOT/Log.txt");
 		PrintWriter printWriter = new PrintWriter(file);
 		Name = request.getParameter("league_name"); 
+		Commissioner = request.getParameter("commName"); 
+		commEmail = request.getParameter("commEmail"); 
 		num_Teams = Integer.parseInt(request.getParameter("num_teams"));
 		ID = getID();
 		League newLeague = new League(Name, null, num_Teams, ID);
@@ -32,11 +34,12 @@ public class App extends HttpServlet {
 			Connection conn = null;
 			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1","root", "");
 			printWriter.println("Database is connected !");
-			String name = "New League";
-			int num = 10;
+			String name = Name;
 			
 			Statement stmt = conn.createStatement();
-			int rs = stmt.executeUpdate("insert into drafthub.league Values('"+ID+"','"+name+"', '1', '"+num+"')");
+			String params = "";
+			String sql = "insert into drafthub.league Values('"+ID+"','"+Name+"', '1', '"+num_Teams+", '"+Commissioner+"', '"+commEmail+"')";
+			int rs = stmt.executeUpdate(sql);
 			ID += ID;
 			setID(ID);
 			conn.close();
