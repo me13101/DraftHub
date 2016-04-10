@@ -1,9 +1,7 @@
 <!DOCTYPE HTML>
-<html lang="en" ng-app>
+<html lang="en">
 <head>
 <title>Fantasy Draft Lottery</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Latest compiled and minified CSS -->
@@ -17,10 +15,10 @@
 <!-- Latest compiled and minified JavaScript -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 </head>
 <body>
-	<script src="index.js"></script>
 	<!-- Static navbar -->
 	<nav class="navbar navbar-default navbar-static-top">
 		<div class="container">
@@ -32,24 +30,34 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Project name</a>
+				<a class="navbar-brand" href="http://localhost:8080/home.html">Draft Hub</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="/DraftHub/WebContent/commissioner.html">Commissioner</a></li>
-					<li><a href="/DraftHub/WebContent/lottery.html">Lottery</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="../navbar/">Default</a></li>
-					<li class="active"><a href="./">Static top <span
-							class="sr-only">(current)</span></a></li>
-					<li><a href="../navbar-fixed-top/">Fixed top</a></li>
-				</ul>
+				<div class="row">
+					<div class="col-md-4">
+						<button id="createLeague" class="btn btn-primary">Create
+							League</button>
+					</div>
+					<div class="col-md-4">
+						<button id="joinLeague" class="btn btn-primary">Join
+							League</button>
+					</div>
+
+					<!-- 				<ul class="nav navbar-nav"> -->
+					<!-- 					<li class="active"><button class="btn btn-primary">Create -->
+					<!-- 							League</button></li> -->
+					<!-- 					<li class="active"><button class="btn btn-primary">Join -->
+					<!-- 							League</button></li> -->
+					<!-- 				</ul> -->
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><button class="btn btn-primary">login</button></li>
+					</ul>
+				</div>
 			</div>
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
+
 	<div class="container">
 
 		<!-- Main component for a primary marketing message or call to action -->
@@ -57,7 +65,8 @@
 			<h1>Set up league</h1>
 			<div class="LeagueName">
 				<form>
-					League Name: <input id="leagueName" type="text" name="first_name">
+					League Name:<br> <input id="leagueName" type="text"
+						name="leagueName"><br>
 				</form>
 			</div>
 			<div>
@@ -81,8 +90,8 @@
 				<table class="owners">
 					<tr>
 						<td><form>
-								Commissioner Name<br> <input id="Owner1" type="text" name="Owner"><br>
-								Commissioner email<br> <input id="teamname1" type="text"
+								Owner<br> <input id="Owner1" type="text" name="Owner"><br>
+								Team Name<br> <input id="teamname1" type="text"
 									name="teamname">
 							</form></td>
 					</tr>
@@ -93,14 +102,8 @@
 					onClick="createLeague()">Create League</button>
 			</div>
 		</div>
-
 	</div>
-	<!-- /container -->
-
-
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="/js/nav.js"></script>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>
@@ -108,8 +111,5 @@
 				|| document
 						.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
 	</script>
-	<script src="../../dist/js/bootstrap.min.js"></script>
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
