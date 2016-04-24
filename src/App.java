@@ -1,5 +1,5 @@
 // Import required java libraries
-import java.io.*;  
+import java.io.*;   
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.sql.*;
@@ -26,123 +26,69 @@ public class App extends HttpServlet {
 		ID = getID();
 		League newLeague = new League(Name, null, num_Teams, ID);
 
-		printWriter.println(newLeague.Name+", "+newLeague.num_Teams);
+		printWriter.println(newLeague.Name+", "+newLeague.num_Teams+", "+commEmail+", "+Commissioner);
 
 		try
 		{
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection conn = null;
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1","root", "");
-			printWriter.println("Database is connected !");
-			String name = Name;
-			
+			Connection conn = getConn();
 			Statement stmt = conn.createStatement();
 			String params = "";
-			String sql = "insert into drafthub.league Values('"+ID+"','"+Name+"', '1', '"+num_Teams+", '"+Commissioner+"', '"+commEmail+"')";
+			String sql = "insert into drafthub.league Values('"+(ID)+"','"+Name+"', '"+ID+"', '"+num_Teams+"', '"+Commissioner+"', '"+commEmail+"')";
 			int rs = stmt.executeUpdate(sql);
-			ID += ID;
-			setID(ID);
+		
 			conn.close();
 		}
 		catch(Exception e)
 		{
-			printWriter.println("Do not connect to DB - Error:"+e);
+			printWriter.println("Error:"+e);
 		}
 		printWriter.close();
 	}
 	
-	public int getID(){
-		Object id = 0;
-		try
-	      {
-	         FileInputStream fileIn = new FileInputStream("C:/xampp/tomcat/webapps/ROOT/LeagueID.ser");
-	         ObjectInputStream in = new ObjectInputStream(fileIn);
-	         id = in.readObject();
-	         int temp = Integer.parseInt(id.toString());
-	         System.out.println(temp+1);
-	         in.close();
-	         fileIn.close();
-	         return temp+1;
-	      }catch(IOException i)
-	      {
-	         i.printStackTrace();
-	      }catch(ClassNotFoundException c)
-	      {
-	         System.out.println("Employee class not found");
-	         c.printStackTrace();
-	      }
-		return 0;
+	public Connection getConn(){
+		try{
+			File file = new File("C:/xampp/tomcat/webapps/ROOT/Connection_Log.txt");
+			PrintWriter printWriter = new PrintWriter(file);
+			try{
+				Class.forName("com.mysql.jdbc.Driver");
+				Connection conn = null;
+				conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1","root", "");
+				printWriter.println("Connected");
+				printWriter.close();
+				return conn;
+			}catch(Exception e){
+				printWriter.println(e);
+			}
+			printWriter.println("DB Not Connected");
+			printWriter.close();
+		}catch(Exception e){
+		}
+		return null;
 	}
 	
-	public void setID(int ID){
-		Object id = ID;
+	public int getID(){
 		try{
-			FileOutputStream fileOut =
-			         new FileOutputStream("C:/xampp/tomcat/webapps/ROOT/LeagueID.ser");
-			         ObjectOutputStream out = new ObjectOutputStream(fileOut);
-			         out.writeObject(id);
-			         out.close();
-			         fileOut.close();
-			         System.out.printf("Serialized data is saved in /tmp/employee.ser");
+			File file = new File("C:/xampp/tomcat/webapps/ROOT/Connection_Log.txt");
+			PrintWriter printWriter = new PrintWriter(file);
+			
+			Connection conn = getConn();
+			Statement stmt = conn.createStatement();
+			ResultSet res;
+			String sql = "select count(*) from drafthub.league";
+			printWriter.println(sql);
+			res = stmt.executeQuery(sql);
+			while(res.next()){
+				ID = Integer.parseInt(res.getString(1));
+				printWriter.println(res.getString(1));
+			}
+			return ID;
 		}catch(Exception e){
-			e.printStackTrace();
+			
 		}
+		return -1;
 	}
+	
 	public static void main (String[] args){
-		Object id = 0;
-		//int id = 1;
-		try{
-			FileOutputStream fileOut =
-			         new FileOutputStream("C:/xampp/tomcat/webapps/ROOT/LeagueID.ser");
-			         ObjectOutputStream out = new ObjectOutputStream(fileOut);
-			         out.writeObject(id);
-			         out.close();
-			         fileOut.close();
-			         System.out.printf("Serialized data is saved in /tmp/employee.ser");
-		}catch(Exception e){
-			e.printStackTrace();
-		}
 		
-		try
-	      {
-	         FileInputStream fileIn = new FileInputStream("C:/xampp/tomcat/webapps/ROOT/LeagueID.ser");
-	         ObjectInputStream in = new ObjectInputStream(fileIn);
-	         id = in.readObject();
-	         int temp = Integer.parseInt(id.toString());
-	         System.out.println(temp+1);
-	         in.close();
-	         fileIn.close();
-	      }catch(IOException i)
-	      {
-	         i.printStackTrace();
-	         return;
-	      }catch(ClassNotFoundException c)
-	      {
-	         System.out.println("Employee class not found");
-	         c.printStackTrace();
-	         return;
-	      }
-		
-		
-//		{
-//			try
-//			{
-//				Class.forName("com.mysql.jdbc.Driver");
-//				Connection conn = null;
-//				conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1","root", "");
-//				System.out.println("Database is connected !");
-//				String name = "New League";
-//				int num = 10;
-//				
-//				Statement stmt = conn.createStatement();
-//				int rs = stmt.executeUpdate("insert into drafthub.league Values('"+0+"','"+name+"', '0', '"+num+"')");
-//				
-//				conn.close();
-//			}
-//			catch(Exception e)
-//			{
-//				System.out.print("Do not connect to DB - Error:"+e);
-//			}
-//		}
 	}
 }
