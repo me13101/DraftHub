@@ -78,6 +78,36 @@
 					onClick="joinLeague()">Join League</button>
 			</div>
 		</div>
+<!-- 		<!-- Button trigger modal --> -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> -->
+<!--   Launch demo modal -->
+<!-- </button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Join League</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+					Team Name:<br> <input id="teamName" type="text"
+						name="teamName"><br>
+				</form>
+				<form>
+					Owner Name:<br> <input id="ownerName" type="text"
+						name="ownerName"><br>
+				</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Join</button>
+        <button type="button" class="btn btn-primary">cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
 	</div>
 	<script src="/js/playerDash.js"></script>
 	<script src="/js/nav.js"></script>
