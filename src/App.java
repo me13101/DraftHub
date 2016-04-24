@@ -8,6 +8,7 @@ import java.sql.*;
 public class App extends HttpServlet {
 	static final long serialVersionUID = 42L;
 	public String Name;
+	public String Password;
 	public String Commissioner;
 	public String commEmail;
 	public int num_Teams;
@@ -19,7 +20,7 @@ public class App extends HttpServlet {
 	{
 		File file = new File("C:/xampp/tomcat/webapps/ROOT/Log.txt");
 		PrintWriter printWriter = new PrintWriter(file);
-		Name = request.getParameter("league_name"); 
+		Name = request.getParameter("league_name");
 		Commissioner = request.getParameter("commName"); 
 		commEmail = request.getParameter("commEmail"); 
 		num_Teams = Integer.parseInt(request.getParameter("num_teams"));
@@ -44,6 +45,35 @@ public class App extends HttpServlet {
 		}
 		printWriter.close();
 	}
+	
+	public void doPost(HttpServletRequest request,
+			HttpServletResponse response)
+					throws ServletException, IOException
+	{
+		File file = new File("C:/xampp/tomcat/webapps/ROOT/Log.txt");
+		PrintWriter printWriter = new PrintWriter(file);
+		Name = request.getParameter("league_name"); 
+		Commissioner = request.getParameter("commName"); 
+		Password = request.getParameter("leaguePW");
+		printWriter.println(Name+", "+Password);
+
+//		try
+//		{
+//			Connection conn = getConn();
+//			Statement stmt = conn.createStatement();
+//			String params = "";
+//			String sql = "insert into drafthub.league Values('"+(ID)+"','"+Name+"', '"+ID+"', '"+num_Teams+"', '"+Commissioner+"', '"+commEmail+"')";
+//			int rs = stmt.executeUpdate(sql);
+//		
+//			conn.close();
+//		}
+//		catch(Exception e)
+//		{
+//			printWriter.println("Error:"+e);
+//		}
+		printWriter.close();
+	}
+	
 	
 	public Connection getConn(){
 		try{
