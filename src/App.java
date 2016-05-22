@@ -82,7 +82,7 @@ public class App extends HttpServlet {
 			try{
 				Class.forName("com.mysql.jdbc.Driver");
 				Connection conn = null;
-				conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1","root", "");
+				conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1","me13101", "Elemnopee3");
 				printWriter.println("Connected");
 				printWriter.close();
 				return conn;
