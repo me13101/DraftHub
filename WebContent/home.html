@@ -19,6 +19,13 @@
 			src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 </head>
 <body>
+<script>
+	var url = window.location.href;
+	alert(url);
+	function getURL(){
+	    return url;
+	}
+</script>
 	<!-- Static navbar -->
 	<nav class="navbar navbar-default navbar-static-top">
 		<div class="container">
@@ -30,7 +37,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="http://localhost:8080/home.html">Draft Hub</a>
+				<a class="navbar-brand" href=getURL()+"/home.html">Draft Hub</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<div class="row">
