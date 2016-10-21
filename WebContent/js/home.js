@@ -10,7 +10,12 @@ document.getElementById("createLeague").addEventListener("click", function(){
 document.getElementById("joinLeague").addEventListener("click", function(){
 	window.location = "http://localhost:8080/playerDashboard.html"; 
 	});
-
+var host = window.location.host;
+	function getURL(res){
+	    if (res == "home"){
+	    return host+"/leagueDashboard.html";
+	    }
+	}
 //var numTeams, leagueName, leagueID;
 //
 //function getNumTeams() {
