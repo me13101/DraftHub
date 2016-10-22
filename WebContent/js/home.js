@@ -19,7 +19,7 @@ $.ajax({
         success: function(result){
             var news = result.sources;
         }});
-home.controller('homeController', function ($scope, news;) {
+home.controller('homeController', function ($scope, news) {
     $scope.news = news;
 
 });
