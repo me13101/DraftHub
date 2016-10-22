@@ -16,9 +16,10 @@
 var home = angular.module('home', []);
 
 home.controller('homeController', function ($scope, $http) {
-    $http.get("https://newsapi.org/v1/sources?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988")
+    $http.get("https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988")
       .then(function(response) {
           $scope.newsArticles = response.data;
+          console.log($scope.newsArticles);
       });
 });
 
