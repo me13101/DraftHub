@@ -23,7 +23,7 @@ var result;
     var home = angular.module('home', []);
 
     // Define the `PhoneListController` controller on the `phonecatApp` module
-    home.controller('home', function ($scope) {
+    home.controller('home-controller', function ($scope) {
     $scope = newsapi();
     });
 
