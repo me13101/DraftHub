@@ -19,7 +19,6 @@ function newsapi() {
             success: function(result){
                         console.log("got here");
                     }});
-    });
     console.log("got here");
 }
 
