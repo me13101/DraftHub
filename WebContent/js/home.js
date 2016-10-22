@@ -21,7 +21,6 @@ home.controller('homeController', function ($scope) {
             $scope.news = result;
             $scope.$applyAsync();
         }});
-function ajaxNews()
 });
  var host = window.location.host;
  function getURL(res){
