@@ -20,7 +20,7 @@ home.controller('home-controller', function ($scope) {
         url: "https://newsapi.org/v1/sources?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988",
         context: document.getElementById("news"),
         success: function(result){
-            $scope = result;
+            $scope.news = result;
         }});
 
 });
