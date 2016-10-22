@@ -2,7 +2,6 @@
 
 
 #newsTable{
-    width: 500px;
     height:150px;
   	overflow:scroll;
 }
