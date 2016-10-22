@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0eb61f99-ab68-4da8-83e7-c76967c830e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/home.html" afterPath="$PROJECT_DIR$/WebContent/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/js/nav.js" afterPath="$PROJECT_DIR$/WebContent/js/nav.js" />
     </list>
     <ignored path="DraftHub.iws" />
@@ -58,8 +57,8 @@
       <file leaf-file-name="nav.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/js/nav.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="96" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
+            <state relative-caret-position="408">
+              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -832,8 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/js/nav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="96" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
+        <state relative-caret-position="408">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
           <folding />
         </state>
       </provider>

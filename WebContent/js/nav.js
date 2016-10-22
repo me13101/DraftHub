@@ -22,7 +22,7 @@ function newsapi() {
     console.log("got here");
 }
 
-function newsTable(var result){
+function newsTable(result){
     for (int i = 0; i < result.length; i++){
         document.getElementById("newsTable").insertRow(i).innerHtml = result[i].sources[i].name;
     }
