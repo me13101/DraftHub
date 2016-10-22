@@ -6,10 +6,11 @@
 
 <div ng-app="myApp" ng-controller="myCtrl">
 
-    <p>Today's welcome message is:</p>
+    <div ng-repeat="Object in data">
+        <p>Today's welcome message is:</p>
 
-    <h1>{{myWelcome}}</h1>
-
+        <h1>{{Object}}</h1>
+    </div>
 </div>
 
 <p>The $http service requests a page on the server, and the response is set as the value of the "myWelcome" variable.</p>
