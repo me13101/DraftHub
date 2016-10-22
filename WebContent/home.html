@@ -17,71 +17,73 @@
             src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script
             src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <!--<script src="/WebContent/angular/angular.min.js"></script>-->
     <link rel="icon"
           type="jpg"
           href="WebContent/images/Alps.jpg" />
 </head>
 <body>
-<div class="news">
-<!--<iframe src="navbar.html"></iframe>-->
-</div>
-<!-- Static navbar -->
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                    aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span> <span
-                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                    class="icon-bar"></span>
-            </button>
-            <!--<button class="navbar-brand" onclick=getURL("home")>Draft Hub</button>-->
-            <a class="navbar-brand" href="javascript:getURL('home')">Draft Hub</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <div class="row">
-                <div class="col-md-4">
-                    <button id="createLeague" class="btn btn-primary">Create
-                        League</button>
-                </div>
-                <div class="col-md-4">
-                    <button id="joinLeague" class="btn btn-primary">Join
-                        League</button>
-                </div>
-
-                <!-- 				<ul class="nav navbar-nav"> -->
-                <!-- 					<li class="active"><button class="btn btn-primary">Create -->
-                <!-- 							League</button></li> -->
-                <!-- 					<li class="active"><button class="btn btn-primary">Join -->
-                <!-- 							League</button></li> -->
-                <!-- 				</ul> -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><button class="btn btn-primary">login</button></li>
-                </ul>
+<div ng-app="">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span> <span
+                        class="icon-bar"></span> <span class="icon-bar"></span> <span
+                        class="icon-bar"></span>
+                </button>
+                <!--<button class="navbar-brand" onclick=getURL("home")>Draft Hub</button>-->
+                <a class="navbar-brand" href="javascript:getURL('home')">Draft Hub</a>
             </div>
-        </div>
-        <!--/.nav-collapse -->
-    </div>
-</nav>
-<div class="container">
-    <div class="jumbotron">
-        <h1>
-            Draft Hub<br>
-        </h1>
-        <h5>
-            Welcome to Draft Hub! Stop pulling names out of a hat. Create a
-            league with Draft Hub and<br> follow live as your fantasy draft
-            order is randomly generated. Host the draft with google hangouts<br>
-            or skype, or simply login and view where you will be drafting!
-        </h5>
-    </div>
-</div>
-<div>
-    <h2>Lottery news</h2>
-    <table id="newsTable" class="table table-striped"></table>
-</div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button id="createLeague" class="btn btn-primary">Create
+                            League</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button id="joinLeague" class="btn btn-primary">Join
+                            League</button>
+                    </div>
 
+                    <!-- 				<ul class="nav navbar-nav"> -->
+                    <!-- 					<li class="active"><button class="btn btn-primary">Create -->
+                    <!-- 							League</button></li> -->
+                    <!-- 					<li class="active"><button class="btn btn-primary">Join -->
+                    <!-- 							League</button></li> -->
+                    <!-- 				</ul> -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><button class="btn btn-primary">login</button></li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>
+                Draft Hub<br>
+            </h1>
+            <h5>
+                Welcome to Draft Hub! Stop pulling names out of a hat. Create a
+                league with Draft Hub and<br> follow live as your fantasy draft
+                order is randomly generated. Host the draft with google hangouts<br>
+                or skype, or simply login and view where you will be drafting!
+            </h5>
+        </div>
+    </div>
+    <div>
+        <h2>Lottery news</h2>
+        <table id="newsTable" class="table table-striped"></table>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
+        <h5>Hello {{yourName}}!</h5>
+    </div>
+</div>
 <script src="/WebContent/js/nav.js"></script>
 <script src="/WebContent/js/home.js"></script>
 
