@@ -12,7 +12,7 @@
 //         //console.log("got here");
 //     }
 
-var home = angular.module('home');
+var home = angular.module('home', []);
 
 home.controller('home-controller', function ($scope) {
     
