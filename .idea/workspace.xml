@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0eb61f99-ab68-4da8-83e7-c76967c830e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/navbar.html" afterPath="$PROJECT_DIR$/WebContent/navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/home.html" afterPath="$PROJECT_DIR$/WebContent/home.html" />
     </list>
     <ignored path="DraftHub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,17 +44,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="705">
-              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="45" />
+              <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -124,8 +124,8 @@
         <option value="$PROJECT_DIR$/WebContent/js/home.js" />
         <option value="$PROJECT_DIR$/WebContent/js/nav.js" />
         <option value="$PROJECT_DIR$/WebContent/css/home.css" />
-        <option value="$PROJECT_DIR$/WebContent/home.html" />
         <option value="$PROJECT_DIR$/WebContent/navbar.html" />
+        <option value="$PROJECT_DIR$/WebContent/home.html" />
       </list>
     </option>
   </component>
@@ -829,18 +829,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
           <folding />
         </state>
       </provider>
