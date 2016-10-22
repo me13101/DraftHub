@@ -4,8 +4,8 @@
 
 
 document.getElementById("createLeague").addEventListener("click", function(){
+    newsapi();
 	window.location = "http://localhost:8080/commCreateLeague.html";
-	newsapi();
 	});
 
 document.getElementById("joinLeague").addEventListener("click", function(){
