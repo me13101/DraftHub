@@ -14,7 +14,7 @@
 
 var home = angular.module('home', []);
 
-home.controller('home-controller', function ($scope) {
+home.controller('homeController', function ($scope) {
     $scope.news = [];
     $.ajax({
         url: "https://newsapi.org/v1/sources?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988",

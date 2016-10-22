@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0eb61f99-ab68-4da8-83e7-c76967c830e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/home.html" afterPath="$PROJECT_DIR$/WebContent/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/js/home.js" afterPath="$PROJECT_DIR$/WebContent/js/home.js" />
     </list>
     <ignored path="DraftHub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,21 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="119" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="119" />
+            <state relative-caret-position="272">
+              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+            <state relative-caret-position="121">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -112,8 +113,8 @@
         <option value="$PROJECT_DIR$/src/App.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/WebContent/js/nav.js" />
-        <option value="$PROJECT_DIR$/WebContent/js/home.js" />
         <option value="$PROJECT_DIR$/WebContent/home.html" />
+        <option value="$PROJECT_DIR$/WebContent/js/home.js" />
       </list>
     </option>
   </component>
@@ -839,18 +840,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/js/home.js">
+    <entry file="file://$PROJECT_DIR$/WebContent/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="119" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="119" />
+        <state relative-caret-position="121">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/home.html">
+    <entry file="file://$PROJECT_DIR$/WebContent/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+        <state relative-caret-position="272">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding />
         </state>
       </provider>
