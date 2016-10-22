@@ -3,14 +3,14 @@
  */
 
 
-document.getElementById("createLeague").addEventListener("click", function(){
-    newsapi();
-	window.location = "http://localhost:8080/commCreateLeague.html";
-	});
-
-document.getElementById("joinLeague").addEventListener("click", function(){
-	window.location = "http://localhost:8080/playerDashboard.html"; 
-	});
+//document.getElementById("createLeague").addEventListener("click", function(){
+//    newsapi();
+//	window.location = "http://localhost:8080/commCreateLeague.html";
+//	});
+//
+//document.getElementById("joinLeague").addEventListener("click", function(){
+//	window.location = "http://localhost:8080/playerDashboard.html";
+//	});
 var host = window.location.host;
 	function getURL(res){
 	    if (res == "home"){
