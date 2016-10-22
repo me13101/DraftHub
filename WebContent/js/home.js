@@ -13,25 +13,14 @@
 //     }
 
 var home = angular.module('home', []);
+
 home.controller('homeController', function ($scope) {
-
-    // Simple GET request example:
-    $http({
-        method: 'GET',
-        url: 'https://newsapi.org/v1/sources?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988'
-    }).then(function successCallback(response) {
-        $scope.news = response;
-        $scope.$applyAsync();
-    }, function errorCallback(response) {
-        console.log(response);
-    });
-
-    // $.ajax({
-    //     url: "https://newsapi.org/v1/sources?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988",
-    //     success: function(result){
-    //         $scope.news = result.sources;
-    //         
-    //     }});
+    $.ajax({
+        url: "https://newsapi.org/v1/sources?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988",
+        success: function(result){
+            $scope.news = result.sources;
+            $scope.$applyAsync();
+        }});
 });
  var host = window.location.host;
  function getURL(res){
