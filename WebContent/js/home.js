@@ -11,6 +11,24 @@
 //document.getElementById("joinLeague").addEventListener("click", function(){
 //	window.location = "http://localhost:8080/playerDashboard.html";
 //	});
+// Define the `phonecatApp` module
+var home = angular.module('home', []);
+
+// Define the `PhoneListController` controller on the `phonecatApp` module
+home.controller('PhoneListController', function PhoneListController($scope) {
+  $scope.phones = [
+    {
+      name: 'Nexus S',
+      snippet: 'Fast just got faster with Nexus S.'
+    }, {
+      name: 'Motorola XOOM™ with Wi-Fi',
+      snippet: 'The Next, Next Generation tablet.'
+    }, {
+      name: 'MOTOROLA XOOM™',
+      snippet: 'The Next, Next Generation tablet.'
+    }
+  ];
+});
 var host = window.location.host;
 	function getURL(res){
 	    if (res == "home"){
@@ -25,7 +43,7 @@ var host = window.location.host;
                 success: function(result){
                             newsTable(result);
                         }});
-        console.log("got here");
+        //console.log("got here");
     }
 
     function newsTable(result){
@@ -33,6 +51,8 @@ var host = window.location.host;
             document.getElementById("newsTable").insertRow(i).innerHtml = result.sources[i].name;
         }
     }
+
+    angular.module
 //test
 //var numTeams, leagueName, leagueID;
 //
