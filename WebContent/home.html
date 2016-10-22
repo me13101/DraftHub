@@ -79,10 +79,10 @@
     <div>
         <h2>Lottery news</h2>
         <table id="newsTable" class="table table-striped">
-        <div ng-repeat="Object in Scope"></div>
+        <div ng-repeat="Object in scope.sources"></div>
             <tr>
                 <td>
-                    <h5>{{$scope.sources[0].name}}</h5>
+                    <h5>{{Object.name}}</h5>
                 </td>
             </tr>
 
