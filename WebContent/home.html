@@ -78,9 +78,15 @@
     </div>
     <div>
         <h2>Lottery news</h2>
-        <table id="newsTable" class="table table-striped"></table>
-        <input type="text" ng-model="yourName" placeholder="Enter a name here">
-        <h5>{{yourName}}</h5>
+        <table id="newsTable" class="table table-striped">
+        <div ng-repeat="Object in Scope"></div>
+            <tr>
+                <td>
+                    <h5>{{$scope.sources[0].name}}</h5>
+                </td>
+            </tr>
+
+        </table>
     </div>
 </div>
 <script src="/WebContent/js/nav.js"></script>

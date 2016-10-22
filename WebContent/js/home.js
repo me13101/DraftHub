@@ -15,7 +15,7 @@
 var home = angular.module('home', []);
 
 // Define the `PhoneListController` controller on the `phonecatApp` module
-home.controller('PhoneListController', function PhoneListController($scope) {
+home.controller('home', function PhoneListController($scope) {
   $scope.phones = [
     {
       name: 'Nexus S',
@@ -30,6 +30,7 @@ home.controller('PhoneListController', function PhoneListController($scope) {
   ];
 });
 var host = window.location.host;
+var result;
 	function getURL(res){
 	    if (res == "home"){
 	    return host+"/leagueDashboard.html";
@@ -51,8 +52,6 @@ var host = window.location.host;
             document.getElementById("newsTable").insertRow(i).innerHtml = result.sources[i].name;
         }
     }
-
-    angular.module
 //test
 //var numTeams, leagueName, leagueID;
 //
