@@ -26,7 +26,7 @@ $.ajax({
 }).done(function() {
   $( this ).addClass( "done" );
 });
-}
+}//test
 //var numTeams, leagueName, leagueID;
 //
 //function getNumTeams() {
