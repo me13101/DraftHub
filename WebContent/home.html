@@ -84,6 +84,15 @@
                 </td>
             </tr>
         </div>
+            <script>
+         function studentController($scope,$http) {
+            var url = "https://newsapi.org/v1/sources?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988";
+
+            $http.get(url).success( function(response) {
+               $scope.news = response;
+            });
+         }
+      </script>
         </table>
     </div>
 </div>
