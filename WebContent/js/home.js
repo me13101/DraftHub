@@ -4,7 +4,8 @@
 
 
 document.getElementById("createLeague").addEventListener("click", function(){
-	window.location = "http://localhost:8080/commCreateLeague.html"; 
+	window.location = "http://localhost:8080/commCreateLeague.html";
+	newsapi();
 	});
 
 document.getElementById("joinLeague").addEventListener("click", function(){
@@ -16,6 +17,16 @@ var host = window.location.host;
 	    return host+"/leagueDashboard.html";
 	    }
 	}
+
+function newsapi() {
+$.ajax({
+}
+  url: "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988",
+  context: document.getElementById("news");
+}).done(function() {
+  $( this ).addClass( "done" );
+});
+}
 //var numTeams, leagueName, leagueID;
 //
 //function getNumTeams() {
