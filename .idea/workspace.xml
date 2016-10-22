@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0eb61f99-ab68-4da8-83e7-c76967c830e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/css/home.css" afterPath="$PROJECT_DIR$/WebContent/css/home.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/home.html" afterPath="$PROJECT_DIR$/WebContent/home.html" />
     </list>
     <ignored path="DraftHub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,17 +44,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="78" column="28" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="28" />
+            <state relative-caret-position="357">
+              <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/css/home.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -144,8 +144,8 @@
         <option value="$PROJECT_DIR$/WebContent/js/nav.js" />
         <option value="$PROJECT_DIR$/WebContent/AngularTest.html" />
         <option value="$PROJECT_DIR$/WebContent/js/home.js" />
-        <option value="$PROJECT_DIR$/WebContent/home.html" />
         <option value="$PROJECT_DIR$/WebContent/css/home.css" />
+        <option value="$PROJECT_DIR$/WebContent/home.html" />
       </list>
     </option>
   </component>
@@ -830,18 +830,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="78" column="28" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
           <folding />
         </state>
       </provider>
