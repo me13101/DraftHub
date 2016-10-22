@@ -15,7 +15,7 @@ document.getElementById("joinLeague").addEventListener("click", function(){
 function newsapi() {
         $.ajax({
             url: "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988",
-            context: document.getElementById("news");
+            context: document.getElementById("news")
     });
     console.log("got here");
 }
