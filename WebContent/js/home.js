@@ -21,9 +21,9 @@ function newsapi() {
         //console.log("got here");
     }
 function ang(result){
-    var home = angular.module('home', []);
+    var home = angular.module('home');
     
-    home.controller('home-controller', function ($scope, []) {
+    home.controller('home-controller', function ($scope) {
     $scope = result;
     });
 }
