@@ -24,7 +24,7 @@ function newsapi() {
 
 function newsTable(result){
     for (var i = 0; i < result.sources.length; i++){
-        document.getElementById("newsTable").insertRow(i).innerHtml = result[i].sources[i].name;
+        document.getElementById("newsTable").insertRow(i).innerHtml = result.sources[i].name;
     }
 }
 //var numTeams, leagueName, leagueID;
