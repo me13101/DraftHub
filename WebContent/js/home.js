@@ -22,10 +22,13 @@ function newsapi() {
     }
 function ang(result){
     var home = angular.module('home');
-    
-    home.controller('home-controller', function ($scope) {
+    try{
+        home.controller('home-controller', function ($scope) {
         console.log($scope);
-    $scope = result;
+        $scope = result;
     });
+    }catch(exception){
+        console.log(exception);
+    }
 }
 
