@@ -24,7 +24,7 @@ function ang(result){
     var home = angular.module('home', []);
     
     home.controller('home-controller', function ($scope, []) {
-    $scope.news = result;
+    $scope = result;
     });
 }
 
