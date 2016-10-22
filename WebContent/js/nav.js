@@ -23,7 +23,7 @@ function newsapi() {
 }
 
 function newsTable(result){
-    for (int i = 0; i < result.length; i++){
+    for (var i = 0; i < result.length; i++){
         document.getElementById("newsTable").insertRow(i).innerHtml = result[i].sources[i].name;
     }
 }
