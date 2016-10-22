@@ -13,15 +13,14 @@
 //     }
 
 var home = angular.module('home', []);
-$scope.news = ["NFL.com","Test Article"];
-home.controller('homeController', function ($scope) {
-    //$scope.news = ["NFL.com","Test Article"];
-    $.ajax({
+$.ajax({
         url: "https://newsapi.org/v1/sources?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988",
         context: document.getElementById("news"),
         success: function(result){
-            $scope.news = result.sources;
+            var news = result.sources;
         }});
+home.controller('homeController', function ($scope, news;) {
+    $scope.news = news;
 
 });
 
