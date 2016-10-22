@@ -16,14 +16,10 @@ function newsapi() {
 
 function ang(result){
     var home = angular.module('home');
-    try{
-        home.controller('home-controller', function ($scope) {
-        console.log($scope);
-        $scope = result;
+    home.controller('home-controller', function ($scope) {
+    console.log($scope);
+    $scope = result;
     });
-    }catch(exception){
-        console.log(exception);
-    }
 }
 
  var host = window.location.host;
