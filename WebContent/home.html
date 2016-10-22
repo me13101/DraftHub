@@ -23,7 +23,7 @@
           href="WebContent/images/Alps.jpg" />
 </head>
 <body>
-<div ng-app="">
+<div ng-app="home">
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
@@ -80,8 +80,7 @@
         <h2>Lottery news</h2>
         <table id="newsTable" class="table table-striped"></table>
         <input type="text" ng-model="yourName" placeholder="Enter a name here">
-        <hr>
-        <h5>Hello {{yourName}}!</h5>
+        <h5>{{yourName}}</h5>
     </div>
 </div>
 <script src="/WebContent/js/nav.js"></script>
