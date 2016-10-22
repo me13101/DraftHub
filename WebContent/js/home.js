@@ -10,7 +10,6 @@
        return host+"/leagueDashboard.html";
    }
 }
-document.onload = newsapi();
 function newsapi() {
     $.ajax({
         url: "https://newsapi.org/v1/sources?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988",
