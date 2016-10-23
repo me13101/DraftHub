@@ -36,6 +36,6 @@ function joinLeague(){
         	//leagueScreen();
         }
     }
-    xhr.open('POST', '/App?league_name='+leagueName+'&leaguePW='+leaguePW, true);
+    xhr.open('POST', '/Web-Inf/App?league_name='+leagueName+'&leaguePW='+leaguePW, true);
     xhr.send(null);
 }
