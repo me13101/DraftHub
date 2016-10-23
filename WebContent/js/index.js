@@ -17,7 +17,7 @@ function getNumTeams() {
 	console.log(numTeams)
 }
 function leagueScreen(){
-	window.location = "http://localhost:8080/leagueDashboard.html";
+	window.location = "http://localhost:8080/WebContent/leagueDashboard.html";
 }
 function createLeague(){
 	
