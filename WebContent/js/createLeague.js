@@ -1,11 +1,7 @@
 
 
-document.getElementById("createLeague").addEventListener("click", function(){
-	window.location = "http://localhost:8080/commCreateLeague.html"; 
-	});
+var createLeague = angular.module('createLeague', []);
 
-document.getElementById("joinLeague").addEventListener("click", function(){
-	window.location = "http://localhost:8080/playerDashboard.html"; 
-	});
-
-
+createLeague.controller('createLeagueController', function ($scope, $http) {
+//console.log("got here");
+});

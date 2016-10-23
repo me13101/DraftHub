@@ -1,4 +1,9 @@
 
+var playerDash = angular.module('playerDash', []);
+
+playerDash.controller('playerDashController', function ($scope, $http) {
+//console.log("got here");
+});
 
 function leagueScreen(){
 	window.location = "http://localhost:8080/leagueDashboard.html";
