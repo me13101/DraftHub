@@ -30,10 +30,3 @@ home.controller('homeController', function ($scope, $http) {
 //      $scope.newsArticles = response.data;
 //  });
 //});
-
- var host = window.location.host;
- function getURL(res){
-   if (res == "home"){
-       return host+"/leagueDashboard.html";
-   }
-}
