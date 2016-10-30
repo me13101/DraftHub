@@ -36,7 +36,8 @@
 
 <servlet-mapping>
    <servlet-name>App</servlet-name>
-   <url-pattern>/App</url-pattern>
+   <url-pattern>/WebContent/WEB-INF/classes/App
+</url-pattern>
 </servlet-mapping>
 
 <servlet>
