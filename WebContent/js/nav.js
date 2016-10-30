@@ -1,34 +1,25 @@
-/**
- * 
- */
-
-document.getElementById("createLeague").addEventListener("click", function(){
-	window.location = "http://localhost:8080/commCreateLeague.html"; 
-	});
-
-document.getElementById("joinLeague").addEventListener("click", function(){
-	window.location = "http://localhost:8080/playerDashboard.html"; 
-	});
-
-//var numTeams, leagueName, leagueID;
+///**
+// *
+// */
 //
-//function getNumTeams() {
-//	var numTeams = $( "#teamSelect" ).val();
-//	console.log(numTeams)
-//}
-//function leagueScreen(){
-//	window.location = "http://localhost:8080/Dashboard.html";
-//}
-//function createLeague(){
-//	
-//	numTeams = $( "#teamSelect" ).val();
-//	leagueName = $("#leagueName").val();
-//	var xhr = new XMLHttpRequest();
-//    xhr.onreadystatechange = function() {
-//        if (xhr.readyState == 4 && xhr.status == 200) {
-//        	leagueScreen();
-//        }
+//document.getElementById("createLeague").addEventListener("click", function(){
+//    var host = window.location.host;
+//    console.log(host);
+////	window.location.href = host+'/WebContent/commCreateLeague.html';
+//    window.location.href = 'localhost:8080/WebContent/commCreateLeague.html';
+//	//console.log(window.location);
+//	//window.location.reload();
+//	//console.log(host+"/WebContent/commCreateLeague.html");
+//	});
+//
+//document.getElementById("joinLeague").addEventListener("click", function(){
+//	var host = window.location.host;
+//    	window.open(host+"/WebContent/playerDashboard.html");
+//	});
+//
+//	 var host = window.location.host;
+//     function getURL(res){
+//       if (res == "home"){
+//           return host+"/WebContent/home.html";
+//       }
 //    }
-//    xhr.open('GET', '/App?league_name='+leagueName+'&num_teams='+numTeams, true);
-//    xhr.send(null);
-//}

@@ -17,7 +17,7 @@ function getNumTeams() {
 	console.log(numTeams)
 }
 function leagueScreen(){
-	window.location = "http://localhost:8080/leagueDashboard.html";
+	window.location = "http://localhost:8080/WebContent/leagueDashboard.html";
 }
 function createLeague(){
 	
@@ -33,6 +33,6 @@ function createLeague(){
         	leagueScreen();
         }
     }
-    xhr.open('GET', '/App?league_name='+leagueName+'&num_teams='+numTeams+'&commName='+commName+'&commEmail='+commEmail, true);
+    xhr.open('GET', '/WebContent/WEB-INF/classes/App?league_name='+leagueName+'&num_teams='+numTeams+'&commName='+commName+'&commEmail='+commEmail, true);
     xhr.send(null);
 }

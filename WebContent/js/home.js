@@ -2,39 +2,31 @@
  * 
  */
 
+// function newsapi() {
+//     $.ajax({
+//         url: "https://newsapi.org/v1/sources?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988",
+//         context: document.getElementById("news"),
+//         success: function(result){
 
-document.getElementById("createLeague").addEventListener("click", function(){
-	window.location = "http://localhost:8080/commCreateLeague.html"; 
-	});
+//         }});
+//         //console.log("got here");
+//     }
 
-document.getElementById("joinLeague").addEventListener("click", function(){
-	window.location = "http://localhost:8080/playerDashboard.html"; 
-	});
-var host = window.location.host;
-	function getURL(res){
-	    if (res == "home"){
-	    return host+"/leagueDashboard.html";
-	    }
-	}
-//var numTeams, leagueName, leagueID;
-//
-//function getNumTeams() {
-//	var numTeams = $( "#teamSelect" ).val();
-//	console.log(numTeams)
-//}
-//function leagueScreen(){
-//	window.location = "http://localhost:8080/Dashboard.html";
-//}
-//function createLeague(){
-//	
-//	numTeams = $( "#teamSelect" ).val();
-//	leagueName = $("#leagueName").val();
-//	var xhr = new XMLHttpRequest();
-//    xhr.onreadystatechange = function() {
-//        if (xhr.readyState == 4 && xhr.status == 200) {
-//        	leagueScreen();
-//        }
-//    }
-//    xhr.open('GET', '/App?league_name='+leagueName+'&num_teams='+numTeams, true);
-//    xhr.send(null);
-//}
+//current home.js angular
+var home = angular.module('home', []);
+
+home.controller('homeController', function ($scope, $http) {
+    $http.get("https://newsapi.org/v1/articles?source=nfl-news&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988")
+      .then(function(response) {
+          $scope.newsArticles = response.data.articles;
+          console.log($scope.newsArticles);
+      });
+});
+
+//var app = angular.module('myApp', []);
+//app.controller('myCtrl', function($scope, $http) {
+//  $http.get("https://newsapi.org/v1/sources?source=the-next-web&sortBy=latest&apiKey=ca73649cfc624eaf975ffa109305e988")
+//  .then(function(response) {
+//      $scope.newsArticles = response.data;
+//  });
+//});
