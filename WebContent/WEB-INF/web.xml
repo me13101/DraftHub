@@ -36,7 +36,12 @@
 
 <servlet-mapping>
    <servlet-name>App</servlet-name>
+<<<<<<< HEAD
    <url-pattern>/WebContent/WEB-INF/classes/App</url-pattern>
+=======
+   <url-pattern>/WebContent/WEB-INF/classes/App
+</url-pattern>
+>>>>>>> 0b0a742d1a3a50f050e02c256a51ba7f831e676d
 </servlet-mapping>
 
 <servlet>
