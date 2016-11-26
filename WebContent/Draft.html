@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html ng-app="createLeague">
+<html ng-app="draft">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,9 +24,9 @@
 			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script
 			src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-	<script src="/WebContent/js/createLeague.js"></script>
+
 </head>
-<body ng-controller="createLeagueController">
+<body ng-controller="draftController">
 <nav class="navbar navbar-default navbar-static-top">
 	<div ng-include="'navbar.html'"></div>
 </nav>
@@ -40,8 +40,11 @@
 				</form>
 			</div>
 			<div>
-				<h3>Select number of teams</h3>
+				<h4>Select number of teams</h4>
 				<select id='teamSelect' onchange="getNumTeams()">
+				</select>
+				<h4>time between delay</h4>
+				<select id='timeSelect' onchange="getNumsTeams()">
 				</select>
 			</div>
 			<div class="teamNames">
@@ -49,19 +52,19 @@
 					<tr>
 						<td><form>
 								Commissioner Name<br> <input id="commName" type="text"
-									name="Owner"><br> Commissioner email<br> <input
-									id="commEmail" type="text" name="teamname">
+									name="Owner">
 							</form></td>
 					</tr>
 				</table>
 			</div>
 			<div>
 				<button type="button" class="btn btn-primary"
-					onClick="createLeague()">Create League</button>
+					onClick="lottery()">Start Draft</button>
 			</div>
 		</div>
 
 	</div>
+	<script src="/WebContent/js/draft.js"></script>
 	<script src="/WebContent/js/index.js"></script>
 	<script src="/WebContent/js/nav.js"></script>
 	<script

@@ -16,8 +16,8 @@ public class main {
 	 * @param owners
 	 * @param number_of_teams
 	 */
-	public static void runLottery(ArrayList<Owner> owners, int number_of_teams){
-		Scanner sc = new Scanner(System.in);
+	public static ArrayList<Owner> runLottery(ArrayList<Owner> owners, int number_of_teams){
+		//Scanner sc = new Scanner(System.in);
 		ArrayList<Owner> order = new ArrayList<Owner>();
 		int i = 0;
 		String cont;
@@ -32,25 +32,19 @@ public class main {
 				order.get(j).Draft_Position = j+1;
 				owners.remove(i);
 				number_of_teams--;
-				System.out.println(order.get(j).Draft_Position+") "+order.get(j).Full_Name);
+				//System.out.println(order.get(j).Draft_Position+") "+order.get(j).Full_Name);
 				if(count < loopIncrementor){
-					System.out.println("continue?(y/n)");
-					cont = sc.nextLine().toLowerCase();
-
-					if (cont.equals("y")){
+					//System.out.println("continue?(y/n)");
+					//cont = sc.nextLine().toLowerCase();
 						count++;
 						continue;
-					}
-					else{
-						break;
-					}
 				}
 			}
 			else{
 				j--;
 			}
 		}
-		printDraftOrder(order);
+		return(order);
 	}
 	/**
 	 * prints the resulting lottery.
