@@ -1,11 +1,18 @@
+package main.java;
 // Import required java libraries
-import java.io.*;   
+import java.io.*;    
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.sql.*;
 
+import org.apache.log4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.apache.log4j.FileAppender;
+
 // Extend HttpServlet class
 public class Join extends HttpServlet {
+	static Logger log = Logger.getLogger(Join.class.getName());
+	
 	static final long serialVersionUID = 42L;
 	public String Name;
 	public String Team;
@@ -23,7 +30,7 @@ public class Join extends HttpServlet {
 		Team = request.getParameter("teamName");
 		
 		//League newLeague = new League(Name, null, num_Teams, ID);
-
+		log.info(Name+", "+Owner+", "+Team);
 		printWriter.println(Name+", "+Owner+", "+Team);
 
 		try
@@ -56,6 +63,10 @@ public class Join extends HttpServlet {
 		
 	}
 	
+	public static void testLog(String testString){
+		log.info(testString);
+	}
+	
 	public int getLeagueID(String leagueNM){
 		
 		try
@@ -83,27 +94,27 @@ public class Join extends HttpServlet {
 	}
 	
 	public Connection getConn(){
-		try{
-			File file = new File("C:/xampp/tomcat/webapps/ROOT/Connection_Log.txt");
-			PrintWriter printWriter = new PrintWriter(file);
-			try{
-				Class.forName("com.mysql.jdbc.Driver");
-				Connection conn = null;
-				conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1","root", "");
-				printWriter.println("Connected");
-				printWriter.close();
-				return conn;
-			}catch(Exception e){
-				printWriter.println(e);
-			}
-			printWriter.println("DB Not Connected");
-			printWriter.close();
-		}catch(Exception e){
-		}
+//		try{
+//			File file = new File("C:/xampp/tomcat/webapps/ROOT/Connection_Log.txt");
+//			PrintWriter printWriter = new PrintWriter(file);
+//			try{
+//				Class.forName("com.mysql.jdbc.Driver");
+//				Connection conn = null;
+//				conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1","root", "");
+//				printWriter.println("Connected");
+//				printWriter.close();
+//				return conn;
+//			}catch(Exception e){
+//				printWriter.println(e);
+//			}
+//			printWriter.println("DB Not Connected");
+//			printWriter.close();
+//		}catch(Exception e){
+//		}
 		return null;
 	}
 	
 	public static void main (String[] args){
-		
+		testLog("test");
 	}
 }
